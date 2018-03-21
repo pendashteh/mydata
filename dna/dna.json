@@ -1,0 +1,76 @@
+{
+    "Version": 1,
+    "UUID": "82122b8d-2033-4d5f-b277-8d73b0678b03",
+    "Name": "mydata",
+    "Properties": {
+        "description": "Take control of My Data",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "RequiresVersion": 0,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "NeighborhoodSize": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    },
+    "Zomes": [
+        {
+            "Name": "base",
+            "Description": "Base functionality",
+            "CodeFile": "base.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "BridgeTo": "",
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "username",
+                    "DataFormat": "string",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "publicEntry",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "reference",
+                    "DataFormat": "links"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "usernameCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "usernameGetMine",
+                    "CallingType": "string",
+                    "Exposure": "private"
+                },
+                {
+                    "Name": "publicEntryCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "publicEntryListMine",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "publicEntryListByUser",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                }
+            ]
+        }
+    ]
+}

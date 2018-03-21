@@ -1,0 +1,20 @@
+{
+    "Tests":[
+        {
+            "Convey": "Jane checks Alexar's public entries.",
+            "Zome": "base",
+            "FnName": "publicEntryListByUser",
+            "Input": "alexar",
+            "Output": [{"fieldname":"email", "value":"holo@alexar.me"}],
+            "Err": null,
+            "ErrMsg": "",
+            "Regexp": "",
+            "Time": 2000,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0,
+            "Benchmark": false
+        }
+    ]
+}

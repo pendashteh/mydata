@@ -1,0 +1,30 @@
+{
+    "Tests":[
+      {
+            "Convey":"Alexar creates his account.",
+            "Zome": "base",
+            "FnName": "usernameCreate",
+            "Input": "alexar",
+            "Output": "%h1%",
+            "Exposure":"public",
+            "Err": "",
+            "Regexp": ""
+        },
+        {
+          "Convey": "Alexar adds a public entry.",
+          "Zome": "base",
+          "FnName": "publicEntryCreate",
+          "Input": {"fieldname":"email", "value":"holo@alexar.me"},
+          "Output": "%h1%",
+          "Err": null,
+          "ErrMsg": "",
+          "Regexp": "",
+          "Time": 500,
+          "Wait": 0,
+          "Exposure": "public",
+          "Raw": false,
+          "Repeat": 0,
+          "Benchmark": false
+        }
+    ]
+}
