@@ -43,6 +43,32 @@ function publicEntryListByUser(username) {
     return entries;
 }
 
+/**
+* Returns the value of a fieldname for a given username
+* @param {object} input - containing properties username, fieldname
+* @return {object} the value of the provided fieldname for the provided username, or "null" if not found.
+*/
+function publicEntryGetValue(input) {
+    var input = input || {};
+    if (!input.username) {
+        input.username = usernameGetMine();
+    }
+    if (!input.fieldname) {
+        // @TODO Throw an exception or putput an error
+        debug("MYDATA_ERROR: No fieldname provided.");
+        return null;
+    }
+    var entries = publicEntryListByUser(input.username);
+    for (var i in entries) {
+        var entry = entries[i];
+        var entry_fieldname = entry.fielname || "";
+        if (entry.fieldname == input.fieldname) {
+            return entry.value;
+        }
+    }
+    return null;
+}
+
 // -----------------------------------------------------------------
 //  The Genesis Function https://developer.holochain.org/genesis
 // -----------------------------------------------------------------
