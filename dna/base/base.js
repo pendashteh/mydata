@@ -51,9 +51,9 @@ function publicEntryListByUser(username) {
 function publicEntryGetValue(input) {
     var input = input || {};
     if (!input.username) {
-        input.username = usernameGetMine();
-    } else {
-        // input.username = JSON.stringify(input.username);
+        // @TODO Throw an exception or putput an error
+        debug("MYDATA_ERROR: User not provided for publicEntryGetValue.");
+        return null;
     }
     if (!input.fieldname) {
         // @TODO Throw an exception or putput an error
