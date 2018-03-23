@@ -61,7 +61,7 @@ function publicEntryGetValue(input) {
     var entries = publicEntryListByUser(input.username);
     for (var i in entries) {
         var entry = entries[i];
-        var entry_fieldname = entry.fielname || "";
+        var entry_fieldname = entry.fieldname || "";
         if (entry.fieldname == input.fieldname) {
             return entry.value;
         }
