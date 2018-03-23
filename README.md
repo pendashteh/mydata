@@ -18,4 +18,4 @@ To run tests:
 
 To run a test chain (a.k.a scenario):
 
-`$ hcdev --no-nat-unpn -debug --mdns=true scenario`
+`$ hcdev --no-nat-upnp -debug --mdns=true scenario {scenario name}`
