@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+HCLOG_DHT_ENABLE=1
+
+cd ./app
+
+scenario=$1
+
+if [ -z $scenario ] || [ ! -d "./test/"$scenario ]; then
+	echo "[Help]"
+	echo ""
+	echo "You need to pass the scenario name."
+	echo ""
+	echo "Choose from available tests:"
+
+	ls -d ./test/*/ | cut -f3 -d'/' | awk '$0=" └─ "$0'
+	echo ""
+	exit 0;
+fi
+
+hcdev --no-nat-upnp -debug --mdns=true scenario $scenario
+
