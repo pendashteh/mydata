@@ -15,6 +15,13 @@
             "Raw": false,
             "Repeat": 0,
             "Benchmark": false
+        },
+        {
+            "Convey": "Jane checks Alexar's email, if provided.",
+            "Zome": "base",
+            "FnName": "publicEntryGetValue",
+            "Input": {"username":"alexar", "fieldname":"email"},
+            "Output": "holo@alexar.me"
         }
     ]
 }
