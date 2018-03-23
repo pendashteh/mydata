@@ -79,6 +79,22 @@
             "Raw": false,
             "Repeat": 0,
             "Benchmark": false
+        },
+        {
+            "Convey": "Retrieves the value of a fieldname by a given a username.",
+            "Zome": "base",
+            "FnName": "publicEntryGetValue",
+            "Input": {"username":"alexar", "fieldname":"email"},
+            "Output": "holo@alexar.me",
+            "Err": null,
+            "ErrMsg": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0,
+            "Benchmark": false
         }
     ],
     "Identity": "",

@@ -69,6 +69,11 @@
                     "Name": "publicEntryListByUser",
                     "CallingType": "json",
                     "Exposure": "public"
+                },
+                {
+                    "Name": "publicEntryGetValue",
+                    "CallingType": "json",
+                    "Exposure": "public"
                 }
             ]
         }
