@@ -50,6 +50,13 @@ button_onclick("button-setusername", function(e) {
     hc_post("usernameCreate", username);
     return false;
 });
+button_onclick("button-getdata", function(e) {
+    var username = input_value('getdata_username');
+    var fieldname = input_value('getdata_fieldname');
+    hc_post("publicEntryGetValue", {"username":username, "fieldname":fieldname}, function(data) {
+        document.getElementById("x-getdata").innerHTML = "<b>Result:</b>" + data;
+    });
+});
 button_onclick("button-listdata", function(e) {
     hc_post("publicEntryListMine", {}, function(data) {
         var result = JSON.parse(data);

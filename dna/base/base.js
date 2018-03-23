@@ -52,6 +52,8 @@ function publicEntryGetValue(input) {
     var input = input || {};
     if (!input.username) {
         input.username = usernameGetMine();
+    } else {
+        // input.username = JSON.stringify(input.username);
     }
     if (!input.fieldname) {
         // @TODO Throw an exception or putput an error
