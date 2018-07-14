@@ -3,6 +3,4 @@
 HCLOG_DHT_ENABLE=1
 
 cd ./app
-hcdev --no-nat-upnp -debug web ${*}
-
-
+hcdev -upnp -debug web ${*}
